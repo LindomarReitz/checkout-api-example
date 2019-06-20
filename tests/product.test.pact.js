@@ -32,7 +32,7 @@ describe('Product API', () => {
     const EXPECTED_BODY =
     {
         "id": productId,
-        "description": "Mushroom - Morels, Dry",
+        "description": "Practical Wooden Pants",
         "price": 320.44
     }
 
