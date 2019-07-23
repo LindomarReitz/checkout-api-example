@@ -18,7 +18,7 @@ npm install
 Run the consumer tests:
 
 ```
-npm run pactTests
+npm run pactTest
 ```
 
 Publish pacts to Pact Broker:
