@@ -6,7 +6,8 @@ services:
     ports:
       - 8083:8083
     environment: 
-      - PACT_BROKER_URL=http://192.168.48.1:8073
+      - PACT_BROKER_URL
+      - PACT_BROKER_TOKEN
     volumes: 
       - .:/src
     working_dir: /src
