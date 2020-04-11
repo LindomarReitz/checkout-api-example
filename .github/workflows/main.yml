@@ -1,0 +1,15 @@
+name: Main workflow
+on: push
+jobs:
+  build:
+    name: NodeJS action
+    env:
+      PACT_BROKER_URL: ${{ secrets.PACT_BROKER_URL }}
+      PACT_BROKER_TOKEN: ${{ secrets.PACT_BROKER_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: docker-compose up -d
+      - run: docker-compose exec -T checkout_api npm install
+      - run: docker-compose exec -T checkout_api npm run pactTest
+      - run: docker-compose exec -T checkout_api npm run publish:pact
