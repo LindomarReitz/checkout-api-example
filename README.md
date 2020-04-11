@@ -1,5 +1,7 @@
 # checkout-api-example
 
+![Main workflow](https://github.com/LindomarReitz/checkout-api-example/workflows/Main%20workflow/badge.svg)
+
 Change the env `PACT_BROKER_URL` before publishing to Pact Broker.
 
 Run using docker-compose:
